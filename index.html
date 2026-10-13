@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cien Páginas - Kit Creativo en Funza</title>
+    <!-- Fuentes tipográficas amigables y legibles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* RESET & BASICS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #2B5B84;
+            line-height: 1.6;
+            background-color: #FAF6F0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fredoka', sans-serif;
+            line-height: 1.3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+
+        /* LAYOUT & SECTIONS */
+        section {
+            padding: 40px 20px;
+            width: 100%;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* BUTTONS */
+        .btn-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .btn-cta {
+            display: inline-block;
+            background-color: #F4A261;
+            color: #000000;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 18px 28px;
+            border-radius: 50px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 550px;
+        }
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            background-color: #f29348;
+        }
+
+        /* SECTION SPECIFIC STYLES */
+        /* Section 1 */
+        .sec-1 {
+            background-color: #2B5B84;
+            padding: 20px;
+            text-align: center;
+        }
+        .sec-1 img {
+            max-width: 150px;
+        }
+
+        /* Section 2 */
+        .sec-2 {
+            background-color: #2B5B84;
+            color: #FFFFFF;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        .sec-2 h1 {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Section 3 */
+        .sec-3 {
+            background-color: #FAF6F0;
+        }
+        .sec-3 h2 {
+            color: #2B5B84;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        /* Section 4 */
+        .sec-4 {
+            background-color: #7BC6A4;
+            color: #0F3822;
+        }
+        .sec-4 h3 {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0 8px 0;
+            color: #2B5B84;
+        }
+        .sec-4 h3:first-child {
+            margin-top: 0;
+        }
+        .sec-4 p {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* Section 5, 8, 13 */
+        .sec-cta-bg-green {
+            background-color: #7BC6A4;
+            padding: 30px 20px;
+        }
+        .sec-cta-bg-cream {
+            background-color: #FAF6F0;
+            padding: 30px 20px;
+        }
+
+        /* Section 6 & 7 */
+        .sec-6 {
+            background-color: #FAF6F0;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .sec-6 h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .sec-7 {
+            background-color: #FAF6F0;
+            padding-top: 10px;
+        }
+        .stack-list {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px dashed #7BC6A4;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .stack-list ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        .stack-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .stack-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #7BC6A4;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .price-box {
+            text-align: center;
+            border-top: 2px solid #FAF6F0;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+        .price-total {
+            font-size: 1.1rem;
+            text-decoration: line-through;
+            color: #888;
+        }
+        .price-offer {
+            font-size: 1.6rem;
+            color: #2B5B84;
+            font-weight: 800;
+            margin: 5px 0;
+        }
+        .price-urgency {
+            color: #d9534f;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* Section 9 & 10 */
+        .sec-9 {
+            background-color: #2B5B84;
+            color: #FFFFFF;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .sec-10 {
+            background-color: #2B5B84;
+            padding-top: 10px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        /* Section 11 (Accordion) */
+        .sec-11 {
+            background-color: #FAF6F0;
+        }
+        .sec-11 h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .accordion-item {
+            background: #ffffff;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .accordion-header {
+            width: 100%;
+            padding: 18px 20px;
+            text-align: left;
+            background: none;
+            border: none;
+            outline: none;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.1rem;
+            color: #2B5B84;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #7BC6A4;
+        }
+        .accordion-header.active::after {
+            content: '−';
+        }
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: #ffffff;
+        }
+        .accordion-content p {
+            padding-bottom: 18px;
+            color: #444;
+        }
+
+        /* Section 12 */
+        .sec-12 {
+            background-color: #7BC6A4;
+            color: #0F3822;
+        }
+        .sec-12 h3 {
+            font-size: 1.4rem;
+            color: #2B5B84;
+            margin-bottom: 12px;
+        }
+
+        /* Media Queries adjustments */
+        @media (min-width: 768px) {
+            .sec-2 h1 { font-size: 1.8rem; }
+            .sec-3 h2 { font
